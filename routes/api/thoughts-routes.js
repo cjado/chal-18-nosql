@@ -3,11 +3,11 @@ const router = require('express').Router();
 const {
     getAllThoughts,
     createThought,
-    findThoughtbyId,
+    findThoughtById,
 } = require('../../controllers/thoughtController');
 
-router.route('/api/thought').get(getAllUsers).post(createUser);
+router.route('/').get(getAllThoughts).post(createThought);
 
-router.route('/:thoughtId').get(findThoughtbyId);
+router.route('/:thoughtId').get(findThoughtById);
 
 module.exports = router;
